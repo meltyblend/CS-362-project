@@ -1,3 +1,9 @@
+Goal: create a web app that allows for users to enter a basic algebra problem and we solve it for them!
+
+Tools used: Flask, Vue + Vite, Sympy, MathJax, Python, and Javascript.
+
+ignore below: 
+
 version of node we all must be on
 v23.7.0
 
