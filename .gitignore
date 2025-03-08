@@ -1,4 +1,9 @@
-.idea
-.venv
-frontend/static
-frontend/node_modules
+.idea/
+.venv/
+pycache/
+frontend/node_modules/
+frontend/static/
+frontend/dist/
+frontend/public/mathjax/
+frontend/index.html
+frontend/env.d.ts

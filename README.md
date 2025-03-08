@@ -13,3 +13,8 @@ npm version we all must be on
 python version we all must be on
 Python 3.12.6
 
+## Frontend dependencies:
+Install mathjax manually if needed:
+```bash
+npm install mathjax@3
+mv node_modules/mathjax/es5 public/mathjax
