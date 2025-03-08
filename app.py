@@ -2,11 +2,11 @@
 
 
 from flask import Flask, send_from_directory
-import os
+import os, sympy
 
 app = Flask(__name__, static_folder='frontend/static')
-
 @app.route('/', defaults={'path': ''})
+
 @app.route('/<path:path>')
 def catch_all(path):
     # If a static file exists for the requested path, serve it

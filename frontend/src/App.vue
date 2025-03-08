@@ -1,23 +1,30 @@
+<!--This is where I will be doing the Frontend of the project
+use "npm run dev" to see the changes-->
+
+
 <script setup lang="ts">
+// importing vue and vue router elements
 import { RouterLink, RouterView } from 'vue-router'
-import HelloWorld from './components/HelloWorld.vue'
+import { onMounted, nextTick } from 'vue'
+
+// lifecycle hook triggered once when the component is mounted to the DOM
+onMounted(() => {
+  // waits for vue to update DOM before executing MathJaX
+  nextTick().then(() => {
+    if ((window as any).MathJax) { // checking if mathjax is loaded and available globally
+      window.MathJax.typesetPromise();  // explicitly renders mathjax/math content
+    }
+  });
+});
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
-      <nav>
-        <RouterLink to="/">Home</RouterLink>
-        <RouterLink to="/about">About</RouterLink>
-      </nav>
-    </div>
-  </header>
-
-  <RouterView />
+  <div>
+    When \( a \ne 0 \), there are two solutions to \( ax^2 + bx + c = 0 \):
+    \[
+      x = {-b \pm \sqrt{b^2 - 4ac} \over 2a}
+    \]
+  </div>
 </template>
 
 <style scoped>
